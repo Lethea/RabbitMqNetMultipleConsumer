@@ -1,0 +1,35 @@
+.DS_Store
+
+# User-specific development files
+dist 
+
+# User-specific files
+*.suo
+*.user
+*.sln.docstates
+
+# Ide files
+*.vs/
+*.vscode/
+*.idea/
+*.cr/
+# Build results
+[Dd]ebug/
+[Dd]ebugPublic/
+[Rr]elease/
+[Rr]eleases/
+x64/
+build/
+bld/
+[Bb]in/
+[Oo]bj/
+
+# ReSharper is a .NET coding add-in
+_ReSharper*/
+*.[Rr]e[Ss]harper
+*.DotSettings.user
+
+# Publish Web Output
+*.pubxml
+.sonarqube
+
