@@ -28,7 +28,7 @@ CONFIGURATION
 ----------------------------------
 
 Change Your Credentials and rabbitmq host port in appsettings.json
-Change QueueName in Consumer. Default is TestQueue
+Change QueueName in Hosted Service. Default is TestQueue
 
 ```
  "RabbitMqConnectionInfo": {
