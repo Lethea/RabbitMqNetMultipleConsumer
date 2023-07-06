@@ -18,6 +18,7 @@ namespace RabbitMqBase
             builder.Services.Configure<RabbitMqConnectionInfo>(builder.Configuration.GetSection(nameof(RabbitMqConnectionInfo)));
             builder.Services.AddHostedService<RabbitMqClientGeneratorHostedService>();
             builder.Services.AddTransient<ISampleProducer,SampleProducer>();
+            builder.Services.AddSingleton<IRabbitInstance, RabbitProducerInstance>();
 
             var app = builder.Build();
 

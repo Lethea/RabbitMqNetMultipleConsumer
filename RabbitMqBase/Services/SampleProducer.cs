@@ -6,17 +6,16 @@ namespace RabbitMqBase.Services
 {
     public class SampleProducer: ISampleProducer
     {
-        private readonly RabbitMqConnectionInfo _connectionInfo;
+        private readonly IRabbitInstance _producerInstance;
 
-        public SampleProducer(IOptionsMonitor<RabbitMqConnectionInfo> connectionInfo)
+        public SampleProducer(IRabbitInstance producerInstance)
         {
-            _connectionInfo = connectionInfo.CurrentValue;
+            _producerInstance = producerInstance;
         }
 
         public void SendMessage<T>(string queueName, T message)
         {
-            var producer = new RabbitMqBaseProducer(_connectionInfo);
-            producer.SendMessage(queueName, message);
+            _producerInstance.GetProducer().SendMessage(queueName, message);
         }
     }
 }
